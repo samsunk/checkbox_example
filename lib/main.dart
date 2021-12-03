@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
   runApp(
@@ -64,6 +65,17 @@ class _CheckBoxExampleState extends State<CheckBoxExample> {
                     });
                   }),
             ],
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              
+              Fluttertoast.showToast(
+                  msg: 'Cycling:$cycling and Swimming:$swimming');
+            },
+            child: const Text('Submit'),
           ),
         ],
       ),
